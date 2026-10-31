@@ -1,64 +1,129 @@
-const cabecera= [
-
-image/banner/1.jpg
-image/banner/2.jpg
-image/banner/3.jpg
-image/banner/4.jpg
-image/banner/5.jpg
-image/banner/6.jpg
-image/banner/7.jpg
-image/banner/8.jpg
-]
-const galeria = [
-
+window.addEventListener("DOMContentLoaded", function() 
 {
-    imagen:"don/image/viajes/1.jpg"
-    titulo: "foto 1"
-    Descripcion: "imagen playa representativo de nuestro proyecto"
-    alt:"playa"
+    //1. array para el header con 8 imágenes
+    const cabecera= [
+    "image/banner/1.jpg",
+    "image/banner/2.jpg",
+    "image/banner/3.jpg",
+    "image/banner/4.jpg",
+    "image/banner/5.jpg",
+    "image/banner/6.jpg",
+    "image/banner/7.jpg",
+    "image/banner/8.jpg",
+    ];
+    //2. array para la galeria con 7 imágenes y sus respectivas descripciones
+    const galeria = [
+    {
+        imagen:"image/viajes/1.jpg",
+        Titulo: "foto 1",
+        Descripcion: "imagen playa representativo de nuestro proyecto",
+        alt:"playa",
+        },
+
+    {
+        imagen:"image/viajes/2.jpg",
+        Titulo: "foto 2",
+        Descripcion: "imagen isla representativo de nuestro proyecto",
+        alt:"isla" ,
+    },
+        
+    { 
+        imagen:"image/viajes/3.jpg",
+        Titulo: "foto 3",
+        Descripcion: "imagen todas las direcciones representativo de nuestro proyecto",
+        alt:"todas las direcciones",
     },
 
-{
-    imagen:"don/image/viajes/2.jpg"
-    titulo: "foto 2"
-    Descripcion: "imagen isla" representativo de nuestro proyecto"
-    alt:"isla" 
-},
+
+    {
+        imagen:"image/viajes/4.jpg",
+        Titulo: "foto 4",
+        Descripcion: "imagen jardin representativo de nuestro proyecto",
+        alt:"jardin",
+    },
+
+
+    {
+        imagen:"image/viajes/5.jpg",
+        Titulo: "foto 5",
+        Descripcion: "imagen puente representativo de nuestro proyecto",
+        alt:"puente",
+    },
+
+    {
+        imagen:"image/viajes/6.jpg",
+        Titulo: "foto 6",
+        Descripcion: "imagen paseo por la orla representativo de nuestro proyecto",
+        alt:"paseo por la orla", 
+    },
+
+    {
+        imagen:"image/viajes/7.jpg",
+        Titulo: "foto 7",
+        Descripcion: "imagen pueblo representativo de nuestro proyecto",
+        alt:"pueblo",
+    },
+    ];
+
+    //seleccionamos la etiqueta "header" usando query selector
+    const elementoHeader=document.querySelector("header");
+
+    //crear el elemento img en memoria
+    const imgBanner=document.createElement("img");
+
+    //añadimos atributos src y alt conrespondenetes
+    const indiceAleatorio = Math.floor(Math.random() * cabecera.length);
+    imgBanner.src=cabecera[indiceAleatorio];
+    imgBanner.alt="Banner dinámico aleatorio de cabecera";
+
+    //añadimos elemento completo creado al header
+    elementoHeader.appendChild(imgBanner);
+
+    //seleccionamos el contenedor de la galería usando querySelector
+    const contenedorGaleria=document.querySelector(".flex-galeria");
+
+    //recorremos cada parte del array utilizando función
+    galeria.forEach(function(item){
     
-   { imagen:"don/image/viajes/3.jpg"
-    titulo: "foto 3"
-    Descripcion: "imagen todas las direcciones representativo de nuestro proyecto"
-    alt:"todas las direcciones 1" 
-},
+        //crear elemento contenedor de la tarjeta ("article");
+        const tarjeta=document.createElement("article");
+        tarjeta.classList.add("tarjeta");
+
+        //crear la imagen de la tarjeta de forma independiente
+        const imgtarjeta=document.createElement("img");
+        imgtarjeta.src=item.imagen;
+        imgtarjeta.alt=item.alt;
+
+        //crear el bloque contenedor para la información de texto (div)
+        const divInfo=document.createElement("div");
+        divInfo.classList.add("tarjeta-info");
+
+        //crear el título (h3) y añadir su contenido de texto
+        const h3Titulo= document.createElement("h3");
+        h3Titulo.textContent=item.Titulo;
+
+        //crear el párrafo (p) y añadir su contenido de texto
+        const pDescripcion= document.createElement("p");
+        pDescripcion.textContent=item.Descripcion;
+
+        //unir los documento de texto dentro del div informativo
+        divInfo.append(h3Titulo,pDescripcion);
+
+        //unir la imagen y el div informativo dentro de la tarjeta (article)
+        tarjeta.append(imgtarjeta, divInfo);
+
+        //añadir la tarjeta completa al contenedor principal de la galería
+        contenedorGaleria.appendChild(tarjeta);
+        });
+});
 
 
-{imagen:"don/image/viajes/4.jpg"{
-    titulo: "foto 3"
-    Descripcion: "imagen jardin representativo de nuestro proyecto"
-    alt:"jardin 1" 
-},
 
 
-{imagen:"don/image/viajes/5.jpg"
-    titulo: "foto 1"
-    Descripcion: "imagen puente representativo de nuestro proyecto"
-    alt:"puente 1" 
-},
 
-{
-    imagen:"don/image/viajes/6.jpg"
-    titulo: "foto 2"
-    Descripcion: "imagen paseo por la orla representativo de nuestro proyecto"
-    alt:"paseo por la orla" 
-},
 
- {
-    imagen:"don/image/viajes/7.jpg"
-    titulo: "foto 3"
-    Descripcion: "imagen pueblo representativo de nuestro proyecto"
-    alt:"pueblo"
-},
-];
+
+
 
 
 
@@ -71,7 +136,7 @@ const galeria = [
             crear elemento Imagen y almacenarlo en el 
                 usar create element
             asignar atributos -alt src tittle 
-                mirar y asignaratributos con set atribute y con lo que sea...
+                mirar y asignar atributos con set atribute y con lo que sea...
             añadi imagen al Dom
                 creo que era con un for it ...*/
     

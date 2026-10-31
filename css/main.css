@@ -1,30 +1,102 @@
-flex-box {
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(	244, 246, 249);
+    color:  rgb(51,51,51);
+}
+
+header {
+    width:100%;
+    height: 350px; /*altura fija para el banner*/
+}
+.imagen-header{
+width:100%;
+object-fit: cover; /*evita que la imagen aleatoria se deforme*/
+overflow: hidden;
+}
+
+main {
+max_width: 1200px;
+margin: 40px auto;
+padding: 0 20px;
+}
+
+h1 {
+text-align: center;
+margin-bottom: 30px;
+font-size: 2.2rem;
+}
+
+.flex-galeria {
 display: flex;
-width:auto;
-heigth:auto;
-margin:auto;
-border: border-box;
-gap: 20%;
+flex-wrap: wrap;
+justify-content: center;
+gap: 25%;
 }
 
+/*diseño delas tarjetas (border, somras y efectos*/
+.tarjeta {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(26, 32, 44);
+    border-radius: 12px; /*bordes redondeados*/
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0,0.05); /*sombra suave*/
 
-h1{
-    font-size: 2rem;
+        /*control de tamaño con flex-box*/
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 300px; /* crece y encoge dinamicamente, con un tamaño base de 300px */
+    max-width: 360px; /* evitar que se estiren demasiado en la pantalla grande*/
 
+    /*transicion suave para el efecto hover*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
+
+/*efecto hover*/
+.tarjeta:hover{
+transform: translateY(-8px); /* eleva la tarjeta ligeramente*/
+box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* intensifica la sombra*/
+}
+/*imagen dentro de la tarjeta*/
+.tarjeta img{
+width: 100px;
+height: 220px;
+object-fit: cover;
+}
+
+/*bloque de información (texto)*/
+.tarjeta-info{
+padding: 20px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.tarjeta-info h3 {
+font-size: 1.3rem;
+color: rgba(26,32,44)
+text-transform: capitalize; /*que la primera letra sea en mayúscula automaticamente*/
+}
+
+.tarjeta-info p {
+font-size: 0.95rem;
+color: rgba(74,85,104);
+line-height: 1.5;
+}
+
 
 
 footer {
-    flex column:
-    column-rule-width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
     text-align: center; 
-
-}
-
-/* adaptación para móviles*/
-@media screen and (min-width: 768){
-    .cabecera div{
-        width:250px;
-    }   
 }
 
