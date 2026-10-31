@@ -1,0 +1,30 @@
+flex-box {
+display: flex;
+width:auto;
+heigth:auto;
+margin:auto;
+border: border-box;
+gap: 20%;
+}
+
+
+h1{
+    font-size: 2rem;
+
+}
+
+
+footer {
+    flex column:
+    column-rule-width: 100%;
+    text-align: center; 
+
+}
+
+/* adaptación para móviles*/
+@media screen and (min-width: 768){
+    .cabecera div{
+        width:250px;
+    }   
+}
+
