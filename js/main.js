@@ -15,53 +15,53 @@ window.addEventListener("DOMContentLoaded", function()
     const galeria = [
     {
         imagen:"image/viajes/1.jpg",
-        Titulo: "foto 1",
-        Descripcion: "imagen playa representativo de nuestro proyecto",
-        alt:"playa",
+        Titulo: "Descanso junto al mar",
+        Descripcion: "Disfruta de las mejores playas tropicales y de aguas cristalinas",
+        alt:"Playa paraíso",
         },
 
     {
         imagen:"image/viajes/2.jpg",
-        Titulo: "foto 2",
-        Descripcion: "imagen isla representativo de nuestro proyecto",
-        alt:"isla" ,
+        Titulo: "Fantásticas vacaciones",
+        Descripcion: "Descanso esclusivo en medio del oceano y la naturaleza",
+        alt:"Bungalows sobre el mar" ,
     },
         
     { 
         imagen:"image/viajes/3.jpg",
-        Titulo: "foto 3",
-        Descripcion: "imagen todas las direcciones representativo de nuestro proyecto",
+        Titulo: "Ruta por el mundo",
+        Descripcion: "Explora los destino más icónico y emblemáticos del planeta",
         alt:"todas las direcciones",
     },
 
 
     {
         imagen:"image/viajes/4.jpg",
-        Titulo: "foto 4",
-        Descripcion: "imagen jardin representativo de nuestro proyecto",
-        alt:"jardin",
+        Titulo: "Jardin maravilloso",
+        Descripcion: "Descruba la increíble historia y arquitetura de Sevilla",
+        alt:"PLaza de España",
     },
 
 
     {
         imagen:"image/viajes/5.jpg",
-        Titulo: "foto 5",
-        Descripcion: "imagen puente representativo de nuestro proyecto",
-        alt:"puente",
+        Titulo: "Famoso puente",
+        Descripcion: "Conozca nuestras rutas por el interior",
+        alt:"Puente",
     },
 
     {
         imagen:"image/viajes/6.jpg",
-        Titulo: "foto 6",
-        Descripcion: "imagen paseo por la orla representativo de nuestro proyecto",
-        alt:"paseo por la orla", 
+        Titulo: "Descubra las rutas por la costa",
+        Descripcion: "Para amantes del mar",
+        alt:"Paseo por la orla", 
     },
 
     {
         imagen:"image/viajes/7.jpg",
-        Titulo: "foto 7",
-        Descripcion: "imagen pueblo representativo de nuestro proyecto",
-        alt:"pueblo",
+        Titulo: "Ruta del vino",
+        Descripcion: "Visite las mejores bodegas",
+        alt:"Pueblo",
     },
     ];
 
@@ -107,6 +107,7 @@ window.addEventListener("DOMContentLoaded", function()
         pDescripcion.textContent=item.Descripcion;
 
         //unir los documento de texto dentro del div informativo
+        /*aqui eligimos el "append" por ser mas actual, pero si queremos que se vea en todos los navegadores (como el internet explore) deberiamos sustituir por "appendChild"() que acepta solo un nodo por llamada*/
         divInfo.append(h3Titulo,pDescripcion);
 
         //unir la imagen y el div informativo dentro de la tarjeta (article)
@@ -138,7 +139,6 @@ window.addEventListener("DOMContentLoaded", function()
             asignar atributos -alt src tittle 
                 mirar y asignar atributos con set atribute y con lo que sea...
             añadi imagen al Dom
-                creo que era con un for it ...*/
     
     /*funcion pintar galeria 
             crear una pieza de estas por cada elemento del array (forEach)
