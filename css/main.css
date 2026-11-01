@@ -17,7 +17,7 @@ header {
 }
 .imagen-header{
 width:100%;
-height:100%;
+height:auto;
 object-fit: cover; /*evita que la imagen aleatoria se deforme*/
 }
 
@@ -141,7 +141,7 @@ footer {
 
     h1{
         font-size:1.8rem;
-        textr-align:left;
+        text-align:left;
     }
 
     .tarjeta img{
