@@ -70,8 +70,9 @@ window.addEventListener("DOMContentLoaded", function()
 
     //crear el elemento img en memoria
     const imgBanner=document.createElement("img");
+    imgBanner.classList.add("imagen-header");
 
-    //añadimos atributos src y alt conrespondenetes
+    //añadimos atributos src y alt conrespondentes
     const indiceAleatorio = Math.floor(Math.random() * cabecera.length);
     imgBanner.src=cabecera[indiceAleatorio];
     imgBanner.alt="Banner dinámico aleatorio de cabecera";

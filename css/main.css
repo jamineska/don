@@ -13,17 +13,19 @@ body {
 
 header {
     width:100%;
-    height: 350px; /*altura fija para el banner*/
 }
+
 .imagen-header{
     width:100%;
     height:auto;
+    max-height:350px; /*mantener el limite de altura en pantallas grandes*/
     object-fit: cover; /*evita que la imagen aleatoria se deforme*/
+    display:block;
 }
 
 main {
     max-width: 1200px;
-    margin: 380px auto 40px auto;
+    margin: 30px auto 40px auto;
     padding: 0 20px;
 }
 
@@ -123,7 +125,7 @@ footer {
 
 @media (max-widht:768px) {
     main{
-        margin-top: 360px auto 20px auto; /*ajuste de margen en el móvil*/
+        margin-top: 20px auto 20px auto; /*ajuste de margen superior para los móviles */
         padding: 0 15px;
     }
     
