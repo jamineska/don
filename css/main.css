@@ -16,36 +16,36 @@ header {
     height: 350px; /*altura fija para el banner*/
 }
 .imagen-header{
-width:100%;
-height:auto;
-object-fit: cover; /*evita que la imagen aleatoria se deforme*/
+    width:100%;
+    height:auto;
+    object-fit: cover; /*evita que la imagen aleatoria se deforme*/
 }
 
 main {
-max-width: 1200px;
-margin: 380px auto 40px auto;
-padding: 0 20px;
+    max-width: 1200px;
+    margin: 380px auto 40px auto;
+    padding: 0 20px;
 }
 
 h1 {
-text-align: center;
-margin-bottom: 30px;
-font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
 }
 
 .titulo-seccion{
-font-size:1.8rem;
-color: rgb(26,32,44);
-text-align:left;
-margin-bottom:25px;
-font-weight:600;
+    font-size:1.8rem;
+    color: rgb(26,32,44);
+    text-align:left;
+    margin-bottom:25px;
+    font-weight:600;
 }
 
 .flex-galeria {
-display: flex;
-flex-wrap: wrap; /* para que bajen enelos móviles */
-justify-content: center; /* para que se centre las tarjetas en la pantalla */
-gap: 20px; /* espacio de separacion entre tarjestas */
+    display: flex;
+    flex-wrap: wrap; /* para que bajen enelos móviles */
+    justify-content: center; /* para que se centre las tarjetas en la pantalla */
+    gap: 20px; /* espacio de separacion entre tarjestas */
 }
 
 /*diseño delas tarjetas (border, somras y efectos*/
@@ -69,34 +69,34 @@ gap: 20px; /* espacio de separacion entre tarjestas */
 
 /*efecto hover*/
 .tarjeta:hover{
-transform: translateY(-8px); /* eleva la tarjeta ligeramente*/
-box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* intensifica la sombra*/
+    transform: translateY(-8px); /* eleva la tarjeta ligeramente*/
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* intensifica la sombra*/
 }
 /*imagen dentro de la tarjeta*/
 .tarjeta img{
-width: 100%;
-height: 220px;
-object-fit: cover;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
 /*bloque de información (texto)*/
 .tarjeta-info{
-padding: 20px;
-display: flex;
-flex-direction: column;
-gap: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .tarjeta-info h3 {
-font-size: 1.3rem;
-color: rgba(26,32,44)
-text-transform: capitalize; /*que la primera letra sea en mayúscula automaticamente*/
+    font-size: 1.3rem;
+    color: rgba(26,32,44);
+    text-transform: capitalize; /*que la primera letra sea en mayúscula automaticamente*/
 }
 
 .tarjeta-info p {
-font-size: 0.95rem;
-color: rgba(74,85,104);
-line-height: 1.5;
+    font-size: 0.95rem;
+    color: rgba(74,85,104);
+    line-height: 1.5;
 }
 
 footer {
@@ -114,8 +114,8 @@ footer {
         gap:15px;
     }
     .tarjeta{
-    flex: 1 1 45%;
-    max-width: 100%;
+        flex: 1 1 45%;
+        max-width: 100%;
     }
 }
 
@@ -135,8 +135,8 @@ footer {
         gap:15px;
     }
     .tarjeta{
-    flex:1 1 100%;
-    max-width: 100%;
+        flex:1 1 100%;
+        max-width: 100%;
     }
 
     h1{
