@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function() 
+document.addEventListener("DOMContentLoaded", function() 
 {
     //1. array para el header con 8 imágenes
     const cabecera= [
